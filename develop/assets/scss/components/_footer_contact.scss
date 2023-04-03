@@ -1,0 +1,23 @@
+.footer {
+  &__contact {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 25px;
+
+    .nav__list {
+      li {
+        margin-bottom: 15px;
+        p,
+        .nav__link {
+          font-size: 1.8rem;
+          margin-bottom: 0px;
+        }
+        .nav__link {
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

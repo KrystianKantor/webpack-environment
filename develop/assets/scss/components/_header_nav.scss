@@ -1,0 +1,86 @@
+.header {
+  &__nav-bar {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include xl {
+      padding: 0 20px;
+      justify-content: center;
+    }
+
+    @include lg {
+      position: absolute;
+      top: 100%;
+      left: 100%;
+      width: 100%;
+      height: max-content;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 10px;
+      background-color: $brightFont;
+      transition: 0.4s;
+      z-index: 8;
+
+      &.active {
+        left: 0;
+      }
+    }
+
+    @include sm {
+      padding-top: 80px;
+    }
+
+    .link {
+      display: inline-block;
+      padding: 5px 10px;
+      font-size: 2.2rem;
+      line-height: 2.7rem;
+      font-family: arial, sans-serif;
+      color: $brightFont;
+
+      @include xxl {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+
+      @include xl {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+      }
+
+      @include lg {
+        width: 100%;
+        padding: 10px 0;
+        margin: 5px 0;
+        text-align: center;
+        color: $darkFont;
+      }
+
+      @include sm {
+        font-size: 1.9rem;
+      }
+
+      &-active,
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  &--fold {
+    .header__nav-bar {
+      .link {
+        font-size: 2rem;
+        line-height: 2.5rem;
+
+        @include xl {
+          font-size: 1.8rem;
+          line-height: 2.3rem;
+        }
+      }
+    }
+  }
+}

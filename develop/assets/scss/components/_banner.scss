@@ -1,0 +1,48 @@
+@import "./banner__slogan-box";
+
+.banner {
+  display: flex;
+  align-items: center;
+  max-width: $maxFluid;
+  width: 100%;
+  height: 750px;
+  margin: 0 auto;
+  background-image: url(./public/images/background.jpg);
+  background-repeat: no-repeat;
+  background-position-y: -10%;
+  background-size: cover;
+  transition: 1s;
+
+  @include xxxl {
+    height: 730px;
+  }
+
+  @include xxl {
+    height: 710px;
+  }
+
+  @include xl {
+    height: 650px;
+  }
+
+  @include lg {
+    height: 600px;
+    background-position-x: center;
+    background-position-y: 0;
+    background-size: 150%;
+  }
+
+  @include md {
+    height: 580px;
+    // background-size: 150%;
+  }
+
+  @include sm {
+    background-position-y: 0;
+    background-size: 300%;
+  }
+
+  &--scrolled {
+    background-position-y: 10%;
+  }
+}

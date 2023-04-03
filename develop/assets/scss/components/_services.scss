@@ -1,0 +1,52 @@
+@import "./blocks";
+@import "./buttons";
+
+.services {
+  width: 100%;
+  padding: 110px 0 80px;
+
+  @include lg {
+    padding: 90px 0 40px;
+  }
+
+  @include md {
+    padding: 70px 0 40px;
+  }
+
+  @include sm {
+    padding: 50px 0 50px;
+  }
+
+  .block {
+    opacity: 0;
+
+    &--visible {
+      opacity: 1;
+    }
+
+    &__background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: 130%;
+      background-size: 50%;
+      opacity: 0.2;
+
+      &--engine {
+        background-image: url("./public/icons/engine-stroke.svg");
+        background-size: 70%;
+      }
+      &--gears {
+        background-image: url("./public/icons/gear-white.svg");
+      }
+      &--suspension {
+        background-image: url("./public/icons/bump-car-stroke.svg");
+        background-size: 60%;
+      }
+    }
+  }
+}

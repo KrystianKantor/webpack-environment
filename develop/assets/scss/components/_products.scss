@@ -1,0 +1,73 @@
+@import "./blocks";
+@import "./buttons";
+
+.products {
+  padding-bottom: 80px;
+
+  @include lg {
+    padding-bottom: 40px;
+  }
+
+  .block {
+    display: flex;
+    padding: 0;
+    margin-bottom: 45px;
+    z-index: 1;
+    transform: translateX(-150%);
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+      transform: translateX(150%);
+
+      .button {
+        left: unset;
+        right: 50px;
+      }
+    }
+
+    &--visible,
+    &--visible:nth-of-type(even) {
+      transform: translateX(0);
+    }
+
+    @include sm {
+      flex-direction: column;
+    }
+
+    &__picture {
+      width: 30%;
+
+      @include md {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+      }
+
+      img {
+        width: 100%;
+
+        @include md {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .block__text {
+      width: 70%;
+      padding: 50px;
+
+      @include md {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .block__head {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

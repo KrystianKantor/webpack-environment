@@ -1,0 +1,54 @@
+.block {
+  min-width: 300px;
+  padding: 60px 50px;
+  position: relative;
+  margin-bottom: 98px;
+  background-color: $blackFont;
+  transition: 1s;
+
+  @include xxl {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 440px) {
+    padding: 50px 40px;
+  }
+
+  &__text {
+    p {
+      font-size: 1.8rem;
+      line-height: 3rem;
+      color: $brightFont;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 1;
+    font-weight: 600;
+
+    @include xxxl {
+      margin-bottom: 40px;
+      font-size: 3rem;
+      line-height: 3.7rem;
+    }
+
+    @include xl {
+      margin-bottom: 35px;
+      font-size: 2.8rem;
+      line-height: 3.5rem;
+    }
+
+    @include xl {
+      margin-bottom: 25px;
+    }
+
+    @include sm {
+      margin-bottom: 40px;
+    }
+  }
+}

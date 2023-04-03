@@ -1,0 +1,51 @@
+.header {
+  &__icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: max-content;
+    margin-left: auto;
+
+    @include sm {
+      position: absolute;
+      top: 100%;
+      left: 100%;
+      width: 100%;
+      height: 80%;
+      transition: 0.4s;
+      z-index: 10;
+      border-bottom: 1px solid #ddd;
+
+      &.active {
+        left: 0;
+      }
+    }
+
+    .icon {
+      display: inline-block;
+      margin-left: 24px;
+
+      @include xl {
+        margin-left: 17px;
+      }
+      @include sm {
+        padding: 25px 15px;
+      }
+
+      img {
+        width: 30px;
+        filter: brightness(0.5);
+        transition: 0.3s;
+
+        @include xl {
+          width: 28px;
+        }
+      }
+
+      &:hover > img {
+        filter: brightness(1);
+      }
+    }
+  }
+}

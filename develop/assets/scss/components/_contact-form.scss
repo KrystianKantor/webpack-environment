@@ -1,0 +1,91 @@
+@import "./buttons";
+
+.form {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 40px 40px;
+  z-index: 1;
+  background-color: $primary;
+
+  @include lg {
+    position: unset;
+  }
+
+  .fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 68px;
+    width: 100%;
+    padding: 10px 21px;
+    margin-bottom: 15px;
+    background-color: #fff;
+
+    @include sm {
+      height: 55px;
+    }
+
+    label {
+      display: none;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 1.4rem;
+      color: #fac63e;
+    }
+
+    input,
+    textarea {
+      height: 100%;
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+      color: $darkFont;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &:focus-within label {
+      display: block;
+    }
+
+    &-message {
+      height: 223px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+
+      textarea {
+        resize: none;
+      }
+    }
+  }
+
+  &__information {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-bottom: 25px;
+    color: #fff;
+  }
+
+  input.form__submit {
+    padding: 18px 30px;
+    margin-bottom: 0;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    color: $primary;
+    background-color: #fff;
+    box-shadow: 5px 5px 6px #00000029;
+    border: none;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $blackFont;
+      color: $brightFont;
+    }
+  }
+}

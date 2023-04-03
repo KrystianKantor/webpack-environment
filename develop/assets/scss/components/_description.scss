@@ -1,0 +1,49 @@
+@import "./text-box";
+@import "./block__image";
+
+.description {
+  position: relative;
+  padding-top: 100px;
+  margin-bottom: 110px;
+  color: $brightFont;
+
+  @include xl {
+    padding-top: 50px;
+  }
+
+  @include lg {
+    margin-bottom: 90px;
+  }
+
+  @include sm {
+    padding-top: 0;
+    margin-bottom: 50px;
+  }
+
+  &__container {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 150%;
+      height: 100%;
+      background-color: $primary;
+    }
+  }
+  &--right &__container::after {
+    left: unset;
+    right: 0;
+  }
+
+  &__text-box {
+    @include md {
+      padding-top: 51vw !important;
+    }
+    @include sm {
+      padding-top: 12vw !important;
+    }
+  }
+}

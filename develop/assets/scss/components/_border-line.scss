@@ -1,0 +1,18 @@
+.border-line {
+  position: absolute;
+  top: -50px;
+  height: 1px;
+  background-color: #cfcfcf;
+
+  &--left {
+    left: 0;
+  }
+
+  &--right {
+    right: 0;
+  }
+
+  @include md {
+    display: none;
+  }
+}

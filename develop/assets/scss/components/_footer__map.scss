@@ -1,0 +1,11 @@
+.footer {
+  .footer__map {
+    padding: 0;
+    .map__head.head {
+      margin-bottom: 15px;
+    }
+    iframe {
+      filter: grayscale(0.5);
+    }
+  }
+}

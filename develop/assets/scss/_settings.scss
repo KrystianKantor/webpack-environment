@@ -1,0 +1,46 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: $primaryFf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.4s;
+  &:hover {
+    color: unset;
+  }
+}
+
+.main {
+  max-width: $maxFluid;
+  margin: 60px auto 0;
+  background-color: $grey;
+  overflow-x: hidden;
+}
+
+.container {
+  @include sm {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: $xl) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: $lg) {
+  html {
+    font-size: 8px;
+  }
+}

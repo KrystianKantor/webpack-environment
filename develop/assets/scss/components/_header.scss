@@ -1,0 +1,60 @@
+@import "./header_nav";
+@import "./header_icons";
+@import "./header_menu-button";
+
+.header {
+  width: 100%;
+  padding: 37px 0px;
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  transition: 0.2s;
+
+  @include xxxl {
+    padding: 32px 0px;
+  }
+
+  @include xl {
+    padding: 28px 0px;
+  }
+
+  @include lg {
+    padding: 25px 0px;
+  }
+
+  @include sm {
+    padding: 15px 0;
+  }
+
+  &--fold {
+    padding: 20px 0;
+  }
+
+  &__brand-logo {
+    font-size: 4rem;
+    line-height: 4.9rem;
+    font-family: Orbitron;
+    color: #fff;
+    text-decoration: underline;
+
+    @include xxl {
+      font-size: 3.5rem;
+      line-height: 4.5rem;
+    }
+
+    @include xl {
+      font-size: 3rem;
+      line-height: 3.9rem;
+    }
+
+    @include lg {
+      font-size: 3.2rem;
+      line-height: 4.1rem;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

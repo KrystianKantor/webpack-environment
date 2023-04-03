@@ -1,0 +1,49 @@
+.description {
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    max-width: 830px;
+    height: 85%;
+    object-fit: cover;
+    z-index: 2;
+
+    @include xl {
+      width: 50%;
+    }
+
+    @include lg {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @include md {
+      top: unset;
+      bottom: 50%;
+      width: 85%;
+      height: 50%;
+      transform: unset;
+    }
+
+    @include sm {
+      width: 100%;
+      position: unset;
+    }
+
+    &--right {
+      left: unset;
+      right: 0;
+
+      @include lg {
+        bottom: 35%;
+      }
+    }
+  }
+  &--right {
+    .description__image {
+      left: unset;
+      right: 0;
+    }
+  }
+}
